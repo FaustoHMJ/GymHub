@@ -1,0 +1,225 @@
+Nome do projeto: Gym Hub
+
+ 
+
+Descrição: O projeto busca entregar uma solução simples para academias de qualquer tipo. O projeto busca check-in para aulas, reserva de equipamentos, planos disponíveis, contrato atual e vitrine virtual para divulgação de produtos disponíveis nas academias que possuem uma loja.
+
+ 
+
+Telas:
+
+ 
+
+Home
+- Tela principal
+
+- Visível para todos
+
+- Link para tela de login
+
+ 
+
+Login
+- Tela de acesso para clientes e administradores
+
+- Input email
+
+- Input senha
+
+- Button Login
+
+- Button Cadastro
+
+- Button Esqueci minha senha
+
+ 
+
+Cadastro de usuário
+- Radio button cliente ou administrador
+
+- Input email
+
+- Input senha
+
+- Input confirmar senha
+
+- Button finalizar cadastro
+
+ 
+
+Menu (componente)
+- Link para tela de agendamento (check-in de aulas e reserva de equipamentos)
+
+  Tela de planos
+
+- Link para tela de planos
+
+- Link para tela de visualização das informações do usuário / administrador
+
+- Link para vitrine virtual da academia
+
+- Button Sair
+
+ 
+
+Agendamentos (cliente)
+- Menu
+
+- Seleção de recurso
+
+- Calendário com vagas agendadas e disponíveis (próximos 30 dias)
+
+- CRUD
+
+ 
+
+Agendamentos (administrador)
+- Menu
+
+- Seleção de recurso
+
+- Calendário com vagas disponíveis (próximos 180 dias)
+
+- CRUD
+
+ 
+
+Vitríne virtual de produtos
+- Tela visível para todos
+
+- Exibição de produtos, fotos, descrições e preços que uma academia oferece em sua loja física
+
+ 
+
+Vitríne virtual de produtos (administrador)
+- Tela visível para administradores
+
+- CRUD
+
+ 
+
+Planos (cliente)
+- Tela para visualizar planos disponíveis
+
+- Plano atual
+
+ 
+
+Planos (administrador)
+- Tela para visualizar planos disponíveis
+
+- Button cadastrar plano
+
+- CRUD
+
+ 
+
+Entidades Banco de Dados:
+
+ 
+
+Academia
+- id
+
+- email administrador
+
+- senha administrador
+
+- nome da academia
+
+- endereço da academia
+
+- telefone 1
+
+- telefone 2
+
+- website
+
+ 
+
+Usuário
+- id
+
+- id_Academia
+
+- id_Plano (atual)
+
+- email
+
+- senha
+
+ 
+
+Recurso (ou aula)
+- id
+
+- id_Academia
+
+- nome
+
+- descrição
+
+- imagem
+
+ 
+
+Disponibilidade
+- id
+
+- id_Recurso
+
+- quantidade disponível
+
+- início
+
+- fim
+
+ 
+
+Reserva
+- id
+
+- id_Usuario
+
+- id_Disponibilidade
+
+ 
+
+Plano
+- id
+
+- id_Academia
+
+- valor
+
+- duração
+
+- agendamentos por semana
+
+ 
+
+Contrato
+- id
+
+- id_Usuario
+
+- id_Plano
+
+- início
+
+- fim
+
+ 
+
+Produto Vitrine
+- id
+
+- id_Academia
+
+- nome do produto
+
+- descrição
+
+- valor do produto
+
+- imagem
