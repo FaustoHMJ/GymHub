@@ -1077,47 +1077,6 @@ section.buttons .container-fluid {
     }
 }
 
-/* Featured Post */
-
-.featured-posts {
-	margin-top: 50px;
-	position: relative;
-	background-color: #1e1f25;
-	margin-left: -50px;
-	margin-right: -50px;
-	padding: 50px;
-}
-
-.featured-posts .heading h2 {
-	font-size: 19px;
-	color: #fff;
-	border-bottom: 1px solid #2d2e39;
-	padding-bottom: 10px;
-	margin-bottom: 25px;
-}
-
-.featured-posts p {
-	margin-top: 20px;
-	color: #fff;
-}
-
-.owl-carousel .owl-dots {
-	position: absolute;
-	top: -55px;
-	right: 0;
-}
-
-.owl-carousel button.owl-dot {
-	width: 10px;
-	height: 10px;
-	background-color: #2d2e39!important;
-	margin-left: 5px;
-	outline: none;
-}
-
-.owl-carousel button.active {
-	background-color: #151515!important;
-}
 
 
 /* Header */
