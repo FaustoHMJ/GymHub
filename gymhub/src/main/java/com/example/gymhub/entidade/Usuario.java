@@ -14,9 +14,11 @@ public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String nome;
     private String email;
     private String senha;
+    private String confirmarsenha;
 
     public String getNome() {
         return nome;
@@ -40,12 +42,27 @@ public class Usuario implements Serializable {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }  
+
+
+    public String getConfirmarsenha() {
+        return confirmarsenha;
+    }
+
+    public void setConfirmarsenha(String confirmarsenha) {
+        this.confirmarsenha = confirmarsenha;
     }
 
     @Override
     public String toString() {
-        return "Usuario [email=" + email + ", nome=" + nome + ", senha=" + senha + "]";
+        return "Usuario [confirmarsenha=" + confirmarsenha + ", email=" + email + ", id=" + id + ", nome=" + nome
+                + ", senha=" + senha + "]";
     }
+
+    
+    
+
+    
 
 	
     

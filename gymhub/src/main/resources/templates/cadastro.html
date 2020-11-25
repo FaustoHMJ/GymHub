@@ -47,12 +47,12 @@
                       <h2>Cadastro</h2>
                     </div>
 
-                    <form id="form-login" action="" method="post" name="form-login">
+                    <form id="form-login" th:action="@{/salvar}" method="post" name="form-login">
                       <div class="row">
 
                         <div class="col-md-12">
                           <fieldset>
-                            <input name="name" type="text" class="form-control" id="name" placeholder="Nome" required="">
+                            <input name="nome" type="text" class="form-control" id="name" placeholder="Nome" required="">
                           </fieldset>
                         </div>
 
@@ -75,19 +75,19 @@
                         
                         <div class="col-md-6 col-sm-6">
                           <div class="circle-item">
-                            <input name="demo-priority" type="radio" id="demo-small" value="16-20" checked>
+                            <input name="cliente" type="radio" id="demo-small" checked>
                             <label for="demo-small">Cliente</label>
                           </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                           <div class="circle-item">
-                            <input name="demo-priority" type="radio" id="demo-medium" value="21-30">
+                            <input name="admin" type="radio" id="demo-medium">
                             <label for="demo-medium">Administrador</label>
                           </div>
                         </div>
                         
                         <div class="col-md-12">
-                          <button type="submit" id="form-submit" class="button">Enviar</button>
+                          <button type="submit" id="form-submit" class="button" value="salvar">Enviar</button>
                         </div>
 
                       </div>
