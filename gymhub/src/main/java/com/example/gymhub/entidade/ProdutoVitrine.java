@@ -20,9 +20,11 @@ public class ProdutoVitrine implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private int idproduto;
     private String nomeproduto;
     private String descricao;
     private float valorproduto;
+    private String imagemproduto;
 
     public String getNomeproduto() {
         return nomeproduto;
@@ -48,11 +50,30 @@ public class ProdutoVitrine implements Serializable {
         this.valorproduto = valorproduto;
     }
 
+    public String getImagemproduto() {
+        return imagemproduto;
+    }
+
+    public void setImagemproduto(String imagemproduto) {
+        this.imagemproduto = imagemproduto;
+    }
+
+    public int getIdproduto() {
+        return idproduto;
+    }
+
+    public void setIdproduto(int idproduto) {
+        this.idproduto = idproduto;
+    }
+
     @Override
     public String toString() {
-        return "ProdutoVitrine [descricao=" + descricao + ", nomeproduto=" + nomeproduto + ", valorproduto="
-                + valorproduto + "]";
-    }    
+        return "ProdutoVitrine [descricao=" + descricao + ", idproduto=" + idproduto + ", imagemproduto="
+                + imagemproduto + ", nomeproduto=" + nomeproduto + ", valorproduto=" + valorproduto + "]";
+    }
+
+    
+    
 
     
 }
