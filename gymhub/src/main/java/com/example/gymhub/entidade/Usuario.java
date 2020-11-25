@@ -19,6 +19,7 @@ public class Usuario implements Serializable {
     private String email;
     private String senha;
     private String confirmarsenha;
+    private Boolean admin;
 
     public String getNome() {
         return nome;
@@ -53,14 +54,28 @@ public class Usuario implements Serializable {
         this.confirmarsenha = confirmarsenha;
     }
 
-    @Override
-    public String toString() {
-        return "Usuario [confirmarsenha=" + confirmarsenha + ", email=" + email + ", id=" + id + ", nome=" + nome
-                + ", senha=" + senha + "]";
+    public int getId() {
+        return id;
     }
 
-    
-    
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Boolean getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        this.admin = admin;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario [admin=" + admin + ", confirmarsenha=" + confirmarsenha + ", email=" + email + ", id=" + id
+                + ", nome=" + nome + ", senha=" + senha + "]";
+    }
+   
 
     
 

@@ -24,7 +24,7 @@ public class UsuarioControle {
         return mv;
     }
 
-    @PostMapping("/salvar")
+    @PostMapping("/salvarUsuario")
     public String salvar(@ModelAttribute Usuario usuario){
         servico.salvar(usuario);
         return "redirect:/usuarios";
