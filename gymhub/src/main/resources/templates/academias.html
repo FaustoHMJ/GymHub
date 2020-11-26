@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>GymHub - Academias</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Main -->
+        <div id="main">
+          <div class="inner">
+
+
+            <!-- Header -->
+            <header id="header">
+              <div class="logo">
+                <a href="/">GymHub</a>
+              </div>
+            </header>  
+
+            <div class="section-heading">
+                <h2>Academias</h2>
+            </div>
+            
+            <!-- Services -->
+            <section class="services">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6" th:each="academia : ${academias}">
+                    <div class="service-item first-item">
+                      <h1 th:text="${academia.nome}" style="padding-top: 20px;color: #fff;padding-bottom: 30px;text-decoration: underline;"></h1>
+                      <p th:text="${academia.descricao}" style="color: #fff;"></p>
+                      <hr style="border-top: 1px solid #fff;">                      
+                      <p th:text="${academia.endereco}" style="color: #fff;"></p>
+                      <p th:text="${academia.telefone}" style="color: #fff; padding-bottom: 20px;"></p>
+                      <a th:href="${academia.website}" style="color:#fff;border: 2px solid white;padding: 10px;">Visitar</a>
+                    </div>
+                  </div>                                    
+                </div>
+              </div>
+          </section>
+            
+            
+            
+          </div>
+        </div>
+
+      <!-- Sidebar -->
+        <div id="sidebar">
+
+          <div class="inner">
+
+            <!-- Search Box -->
+            <section id="search" class="alt">
+              <form method="get" action="#">
+                <input type="text" name="search" id="search" placeholder="Pesquisar..." />
+              </form>
+            </section>
+
+            
+              
+            <!-- Menu -->
+            <nav id="menu">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/mostraPlanos">Planos</a></li>
+                <li><a href="/mostraProdutos">Produtos</a></li>            
+                <li><a href="simple_page">Simple Page</a></li>
+                <li><a href="shortcodes">Shortcodes</a></li>
+                <li>
+                  <span class="opener">Cadastros</span>
+                  <ul>
+                    <li><a href="/planosCadastro">Planos</a></li>
+                    <li><a href="/produtosVitrine">Produtos</a></li>
+                    <li><a href="/usuarios">Usuários</a></li>
+                  </ul>
+                </li>                             
+              </ul>
+            </nav>
+
+            
+
+            <!-- Footer -->
+            <footer id="footer">
+              <p class="copyright">Copyright &copy; 2020 GymHub
+              <br>Designed by <a rel="nofollow" href="#">Template Mo</a></p>
+            </footer>
+
+          </div>
+        </div>
+
+    </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/transition.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+
+  </body>
+
+</html>

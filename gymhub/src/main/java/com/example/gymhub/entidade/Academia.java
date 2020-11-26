@@ -14,7 +14,9 @@ public class Academia implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String nome;
+    private String descricao;
     private String endereco;
     private String telefone;
     private String website;
@@ -55,11 +57,31 @@ public class Academia implements Serializable {
         this.website = website;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     @Override
     public String toString() {
-        return "Academia [endereco=" + endereco + ", nome=" + nome + ", telefone=" + telefone + ", website=" + website
-                + "]";
+        return "Academia [descricao=" + descricao + ", endereco=" + endereco + ", id=" + id + ", nome=" + nome
+                + ", telefone=" + telefone + ", website=" + website + "]";
     }
+
+    
+
+    
 
     
 }
