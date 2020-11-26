@@ -46,11 +46,11 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="banner-caption">
-                            <h4>Hello, this is your <em>GymHub</em> Theme.</h4>
-                            <span>AWESOME HTML5 &amp; CSS3 TEMPLATE</span>
-                            <p>Do you know that <strong>GymHub</strong> is a free to use Bootstrap 4 CSS template by <strong>templatemo</strong>? You can edit and add more pages as you wanted for your personal or corporate websites.</p>
+                            <h4><em>GymHub</em></h4>
+                            <span>Lorem ipsum dolor sit amet</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             <div class="primary-button">
-                              <a href="#">Read More</a>
+                              <a href="#">Saiba Mais</a>
                             </div>
                           </div>
                         </div>
@@ -61,113 +61,65 @@
               </div>
             </section>
 
-            <!-- Services -->
-            <section class="services">
+            <!-- Academias -->
+            <section class="services" style="margin-top: 50px;">
+              <div class="section-heading">
+                <h1 style="text-align: center;margin-bottom: 50px;">Academias</h1>
+              </div>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-6" th:each="academia : ${academias}">
                     <div class="service-item first-item">
-                      <div class="icon"></div>
-                      <h4>Web Design</h4>
-                      <p>Credit goes to <a rel="nofollow" href="https://www.pexels.com">Pexels</a> and <a rel="nofollow" href="https://www.rawpixel.com">Raw Pixel</a> for images used in this template. Thank you.</p>
+                      <h1 th:text="${academia.nome}" style="padding-top: 20px;color: #fff;padding-bottom: 30px;text-decoration: underline;"></h1>
+                      <p th:text="${academia.descricao}" style="color: #fff;"></p>
+                      <hr style="border-top: 1px solid #fff;">                      
+                      <p th:text="${academia.endereco}" style="color: #fff;"></p>
+                      <p th:text="${academia.telefone}" style="color: #fff; padding-bottom: 20px;"></p>
+                      <a th:href="${academia.website}" style="color:#fff;border: 2px solid white;padding: 10px;">Visitar</a>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="service-item second-item">
-                      <div class="icon"></div>
-                      <h4>Bootstrap 4</h4>
-                      <p>Proin aliquam facilisis ante interdum. Sed nulla feugiat tempus aliquam.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="service-item third-item">
-                      <div class="icon"></div>
-                      <h4>HTML CSS</h4>
-                      <p>Proin aliquam facilisis ante interdum. Sed nulla feugiat tempus aliquam.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="service-item fourth-item">
-                      <div class="icon"></div>
-                      <h4>Download Free</h4>
-                      <p>We have many free to use CSS web templates on our site for you.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="service-item fivth-item">
-                      <div class="icon"></div>
-                      <h4>Get in touch</h4>
-                      <p>You can get the fastest response from <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> facebook page.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="service-item sixth-item">
-                      <div class="icon"></div>
-                      <h4>Spread a word</h4>
-                      <p>Please tell your friends about our website. This is very helpful.</p>
-                    </div>
-                  </div>
+                  </div>                                    
                 </div>
               </div>
             </section>
 
-            <!-- Top Image -->
-            <section class="top-image">
+            <!-- Planos -->
+            <section class="services">
+              <div class="section-heading">
+                <h1 style="text-align: center;margin-bottom: 50px;">Planos</h1>
+              </div>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-12">
-                    <img src="assets/images/top-image.jpg" alt="">
-                    <div class="down-content">
-                      <h4>Ante Interdum Chambray</h4>
-                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.</p>
-                      <div class="primary-button">
-                        <a href="#">Read More</a>
-                      </div>
+                  <div class="col-md-4" th:each="plano : ${planos}">
+                    <div class="service-item first-item">
+                      <h1 th:text="${plano.nomeplano}" style="padding-top: 20px;color: #fff;padding-bottom: 30px;text-decoration: underline;"></h1>
+                      <p th:text="${plano.descricao}" style="color: #fff;"></p>
+                      <hr style="border-top: 1px solid #fff;">
+                      <h5 style="color:#fff">Diferenciais:</h5>
+                      <p th:text="${plano.diferenciais}" style="color: #fff;"></p>
+                      <h4 th:text="${plano.valor}" style="padding-top: 20px;color: #fff;"></h4>
                     </div>
-                  </div>
+                  </div>                                    
                 </div>
               </div>
             </section>
 
-            <!-- Left Image -->
-            <section class="left-image">
+            <!-- Produtos -->
+            <section class="services">
+              <div class="section-heading">
+                <h1 style="text-align: center;margin-bottom: 50px;">Produtos</h1>
+              </div>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-6">
-                    <img src="assets/images/left-image.jpg" alt="">
-                  </div>
-                  <div class="col-md-6">
-                    <div class="right-content">
-                      <h4>Ante Interdum Raclette</h4>
-                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>
-                      <div class="primary-button">
-                        <a href="#">Read More</a>
-                      </div>
+                  <div class="col-md-3" th:each="produtoVitrine : ${produtosVitrine}">
+                    <div class="service-item first-item">
+                      <img th:src="${produtoVitrine.imagemproduto}">
+                      <h4 th:text="${produtoVitrine.nomeproduto}" style="padding-top: 20px;color: #fff;"></h4>
+                      <p th:text="${produtoVitrine.descricao}" style="color: #fff;"></p>
                     </div>
-                  </div>
+                  </div>                                    
                 </div>
               </div>
-            </section>
-
-            <!-- Right Image -->
-            <section class="right-image">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="left-content">
-                      <h4>Ante Interdum Raclette</h4>
-                      <p>Lorem ipsum dolor amet raclette chambray bitters, hammock celiac slow-carb flexitarian four dollar toast food truck health goth. Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put a bird on it brooklyn forage.<br><br>Air plant brunch food truck vegan scenester organic crucifix irony pour-over pop-up austin hexagon kitsch swag. Godard literally humblebrag cloud bread vice master cleanse chambray typewriter put bird brooklyn</p>
-                      <div class="primary-button">
-                        <a href="#">Read More</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <img src="assets/images/right-image.jpg" alt="">
-                  </div>
-                </div>
-              </div>
-            </section>
+            </section>      
 
           </div>
         </div>
@@ -191,7 +143,7 @@
                 <li><a href="/mostraAcademias">Academias</a></li>
                 <li><a href="/mostraPlanos">Planos</a></li>
                 <li><a href="/mostraProdutos">Produtos</a></li>            
-                <li><a href="simple_page">Simple Page</a></li>
+                
                 <li><a href="shortcodes">Shortcodes</a></li>
                 <li>
                   <span class="opener">Cadastros</span>
