@@ -19,6 +19,17 @@ public class ProdutoControle {
     @GetMapping("/produtosVitrine")
     public ModelAndView getProdutos(){
         ModelAndView mv = new ModelAndView("cadastroProduto");
+        
+        mv.addObject("produtoVitrine",  new ProdutoVitrine());
+        mv.addObject("produtosVitrine", produtoServico.getProdutos());
+
+        return mv;
+    }
+
+    @GetMapping("/mostraProdutos")
+    public ModelAndView mostraProdutos(){
+        ModelAndView mv = new ModelAndView("produtos");
+
         mv.addObject("produtosVitrine", produtoServico.getProdutos());
 
         return mv;

@@ -17,11 +17,6 @@ public class Controle {
         return "planos";
     }
 
-    @GetMapping("/produtos")
-    public String produtos(){
-        return "produtos";
-    }
-
     @GetMapping("/shortcodes")
     public String shortcodes(){
         return "shortcodes";

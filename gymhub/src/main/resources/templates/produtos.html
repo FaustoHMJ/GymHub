@@ -46,20 +46,13 @@
             <section class="services">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6" th:each="produtoVitrine : ${produtosVitrine}">
                       <div class="service-item first-item">
                         <div class="icon"></div>
-                        <h4>Produto 1</h4>
-                        <p>texto 1</p>
+                        <h4 th:text="${produtoVitrine.nomeproduto}"></h4>
+                        <p th:text="${produtoVitrine.descricao}"></p>
                       </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="service-item first-item">
-                        <div class="icon"></div>
-                        <h4>Produto 2</h4>
-                        <p>texto 2</p>
-                      </div>
-                    </div>                    
+                    </div>                                    
                   </div>
                 </div>
             </section>
@@ -88,7 +81,7 @@
               <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="planos">Planos</a></li>
-                <li><a href="produtos">Produtos</a></li>          
+                <li><a href="/mostraProdutos">Produtos</a></li>          
                 <li><a href="simple_page">Simple Page</a></li>
                 <li><a href="shortcodes">Shortcodes</a></li>
                 <li>
