@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>GymHub - Planos</title>
+    <title>GymHub - Cadastro de Planos</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,29 +37,53 @@
                 <a href="index">GymHub</a>
               </div>
             </header>  
-
-            <div class="section-heading">
-                <h2>Planos</h2>
-            </div>
             
-            <!-- Services -->
-            <section class="services">
+            <!-- Forms -->
+            <section class="forms">
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-6" th:each="plano : ${planos}">
-                    <div class="service-item first-item">
-                      <h1 th:text="${plano.nomeplano}" style="padding-top: 20px;color: #fff;padding-bottom: 30px;text-decoration: underline;"></h1>
-                      <p th:text="${plano.descricao}" style="color: #fff;"></p>
-                      <hr style="border-top: 1px solid #fff;">
-                      <h5 style="color:#fff">Diferenciais:</h5>
-                      <p th:text="${plano.diferenciais}" style="color: #fff;"></p>
-                      <h4 th:text="${plano.valor}" style="padding-top: 20px;color: #fff;"></h4>
+                  <div class="col-md-12">
+                    <div class="section-heading">
+                      <h2>Cadastro de Planos</h2>
                     </div>
-                  </div>                                    
+
+                    <form id="form-login" th:action="@{/salvarPlano}" method="post" name="form-login">
+                      <div class="row">
+
+                        <div class="col-md-12">
+                          <fieldset>
+                            <input name="nomeplano" type="text" class="form-control" id="nomeplano" placeholder="Nome do Plano" required="">
+                          </fieldset>
+                        </div>
+
+                        <div class="col-md-12">
+                            <fieldset>
+                              <input name="descricao" type="text" class="form-control" id="descricao" placeholder="Descrição do Plano" required="">
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-12">
+                            <fieldset>
+                              <input name="diferenciais" type="text" class="form-control" id="diferenciais" placeholder="Diferenciais do Plano" required="">
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-12">
+                            <fieldset>
+                              <input name="valorproduto" type="text" class="form-control" id="valorproduto" placeholder="Valor do Produto" required="">
+                            </fieldset>
+                        </div>
+                        
+                        <div class="col-md-12">
+                          <button type="submit" id="form-submit" class="button" value="salvar">Enviar</button>
+                        </div>
+
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
-          </section>
-            
+            </section>
             
             
           </div>
@@ -76,15 +100,13 @@
                 <input type="text" name="search" id="search" placeholder="Pesquisar..." />
               </form>
             </section>
-
-            
               
             <!-- Menu -->
             <nav id="menu">
               <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="planos">Planos</a></li>
-                <li><a href="/mostraProdutos">Produtos</a></li>                
+                <li><a href="/mostraProdutos">Produtos</a></li>        
                 <li><a href="simple_page">Simple Page</a></li>
                 <li><a href="shortcodes">Shortcodes</a></li>
                 <li>
