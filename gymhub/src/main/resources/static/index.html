@@ -59,67 +59,7 @@
                   </div>
                 </div>
               </div>
-            </section>
-
-            <!-- Academias -->
-            <section class="services" style="margin-top: 50px;">
-              <div class="section-heading">
-                <h1 style="text-align: center;margin-bottom: 50px;">Academias</h1>
-              </div>
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-6" th:each="academia : ${academias}">
-                    <div class="service-item first-item">
-                      <h1 th:text="${academia.nome}" style="padding-top: 20px;color: #fff;padding-bottom: 30px;text-decoration: underline;"></h1>
-                      <p th:text="${academia.descricao}" style="color: #fff;"></p>
-                      <hr style="border-top: 1px solid #fff;">                      
-                      <p th:text="${academia.endereco}" style="color: #fff;"></p>
-                      <p th:text="${academia.telefone}" style="color: #fff; padding-bottom: 20px;"></p>
-                      <a th:href="${academia.website}" style="color:#fff;border: 2px solid white;padding: 10px;">Visitar</a>
-                    </div>
-                  </div>                                    
-                </div>
-              </div>
-            </section>
-
-            <!-- Planos -->
-            <section class="services">
-              <div class="section-heading">
-                <h1 style="text-align: center;margin-bottom: 50px;">Planos</h1>
-              </div>
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-4" th:each="plano : ${planos}">
-                    <div class="service-item first-item">
-                      <h1 th:text="${plano.nomeplano}" style="padding-top: 20px;color: #fff;padding-bottom: 30px;text-decoration: underline;"></h1>
-                      <p th:text="${plano.descricao}" style="color: #fff;"></p>
-                      <hr style="border-top: 1px solid #fff;">
-                      <h5 style="color:#fff">Diferenciais:</h5>
-                      <p th:text="${plano.diferenciais}" style="color: #fff;"></p>
-                      <h4 th:text="${plano.valor}" style="padding-top: 20px;color: #fff;"></h4>
-                    </div>
-                  </div>                                    
-                </div>
-              </div>
-            </section>
-
-            <!-- Produtos -->
-            <section class="services">
-              <div class="section-heading">
-                <h1 style="text-align: center;margin-bottom: 50px;">Produtos</h1>
-              </div>
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-3" th:each="produtoVitrine : ${produtosVitrine}">
-                    <div class="service-item first-item">
-                      <img th:src="${produtoVitrine.imagemproduto}">
-                      <h4 th:text="${produtoVitrine.nomeproduto}" style="padding-top: 20px;color: #fff;"></h4>
-                      <p th:text="${produtoVitrine.descricao}" style="color: #fff;"></p>
-                    </div>
-                  </div>                                    
-                </div>
-              </div>
-            </section>      
+            </section>           
 
           </div>
         </div>
